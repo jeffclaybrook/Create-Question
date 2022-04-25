@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create Question</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="form">
+      <section>
+         <h1>Create Question</h1>
+         <div class="timecode-wrapper">
+            <input type="text" maxlength="2" placeholder="HH">
+            <span>:</span>
+            <input type="text" maxlength="2" placeholder="MM">
+            <span>:</span>
+            <input type="text" maxlength="2" placeholder="SS">
+         </div>
+         <div class="form-field">
+            <label for="question">Question</label>
+            <input type="text" id="question" required>
+         </div>
+         <div class="flex">
+            <div class="form-field type">
+               <label for="type">Question type</label>
+               <select id="type" required>
+                  <option value="One correct answer">One correct answer</option>
+                  <option value="Multiple correct answers">Multiple correct answers</option>
+               </select>
+            </div>
+            <div class="form-field points">
+               <label for="points">Points</label>
+               <input type="text" id="points" required>
+            </div>
+         </div>
+      </section>
+      <section>
+         <h2>Options</h2>
+         <ul>
+            <li>
+               <input type="radio" name="option" required>
+               <input type="text" class="option-text" required>
+               <button class="delete-btn"><span class="delete-icon"></span></button>
+            </li>
+            <li>
+               <input type="radio" name="option" required>
+               <input type="text" class="option-text" required>
+               <button class="delete-btn"><span class="delete-icon"></span></button>
+            </li>
+         </ul>
+         <button class="add-btn"><span class="add-icon"></span>Add Option</button>
+      </section>
+      <section>
+         <div class="flex">
+            <button class="outlined-btn">Save</button>
+            <button class="filled-btn">Save & New</button>
+         </div>
+      </section>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
